@@ -37,3 +37,5 @@ const mdContent = `# LEETCODE-SOLUTIONS\n\n\`\`\`\n${rootDir}/\n${generateTree(
 
 fs.writeFileSync(outputPath, mdContent, "utf-8");
 console.log("✅ README.md 生成成功！");
+
+// node generateReadme.js
