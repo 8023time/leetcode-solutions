@@ -8,7 +8,7 @@
     "add": "git add .",
     "commit": "node commit-with-date.js",
     "push": "git push -u origin main",
-    "updata": "git add . && node commit-width-date.js && git push -u origin main",
+    "updata": "git add . && node commit-with-date.js && git push -u origin main",
     "generate": "node generateReadme.js",
     "format": "prettier --write ."
   },
