@@ -11,17 +11,17 @@
  * @return {number[]}
  */
 var rightSideView = function (root) {
-  // 采用层序遍历来解决这个题目
-  let ans = [];
-  if (root === null) {
-    return [];
-  }
-  const queue_arr = [root];
-  ans.push(root.val);
+    // 采用层序遍历来解决这个题目
+    let ans = [];
+    if (root === null) {
+        return [];
+    }
+    const queue_arr = [root];
+    ans.push(root.val);
 
-  while (queue_arr.length > 0) {
-    let length = queue_arr.length;
+    while (queue_arr.length > 0) {
+        let length = queue_arr.length;
 
-    for (let i = 0; i < length; i++) {}
-  }
+        for (let i = 0; i < length; i++) {}
+    }
 };
