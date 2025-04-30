@@ -1,0 +1,30 @@
+{
+  "name": "leetcode-solutions",
+  "version": "1.0.0",
+  "description": "leetcode solutions in javascript and C++ and go",
+  "main": "generateReadme.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "add": "git add .",
+    "commit": "git commit -m \"add $(Get-Date -Format 'yyyy-MM-dd') \"",
+    "push": "git push -u origin main",
+    "updata": "git add . && git commit -m \"add $(Get-Date -Format 'yyyy-MM-dd') \" && git push -u origin main",
+    "generate": "node generateReadme.js",
+    "format": "prettier --write ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/8023time/leetcode-solutions.git"
+  },
+  "keywords": [],
+  "author": "8023time",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/8023time/leetcode-solutions/issues"
+  },
+  "homepage": "https://github.com/8023time/leetcode-solutions#readme",
+  "devDependencies": {
+    "prettier": "3.5.3"
+  }
+}
