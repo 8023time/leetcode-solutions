@@ -6,9 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "add": "git add .",
-    "commit": "git commit -m \"add $(Get-Date -Format 'yyyy-MM-dd') \"",
+    "commit": "node commit-with-date.js",
     "push": "git push -u origin main",
-    "updata": "git add . && git commit -m \"add $(Get-Date -Format 'yyyy-MM-dd') \" && git push -u origin main",
+    "updata": "git add . && node commit-width-date.js && git push -u origin main",
     "generate": "node generateReadme.js",
     "format": "prettier --write ."
   },
