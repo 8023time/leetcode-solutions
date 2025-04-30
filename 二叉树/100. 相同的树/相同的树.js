@@ -11,11 +11,15 @@
  * @param {TreeNode} q
  * @return {boolean}
  */
-var isSameTree = function(p, q) {
-    // 进行深搜或者广搜
-    // 使用递归的做法
-    if(p===null || q===null){
-        return p===q
-    }
-    return p.val === q.val && isSameTree(p.left,q.left) && isSameTree(p.right,q.right)
+var isSameTree = function (p, q) {
+  // 进行深搜或者广搜
+  // 使用递归的做法
+  if (p === null || q === null) {
+    return p === q;
+  }
+  return (
+    p.val === q.val &&
+    isSameTree(p.left, q.left) &&
+    isSameTree(p.right, q.right)
+  );
 };

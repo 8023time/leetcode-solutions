@@ -3,8 +3,8 @@
  * @return {number}
  */
 var numSplits = function (s) {
-    // 采用暴力解法的代码
-    /*
+  // 采用暴力解法的代码
+  /*
     // 思路就是处死用暴力解法来解决
     // 一个for循环里面还有两个for循环,利用map哈希表来解决这个问题
     let nums = 0 // 最后`的答案
@@ -32,25 +32,25 @@ var numSplits = function (s) {
     return nums
     */
 
-    // 优化后的代码
-    let sune = 0
-    let leftmap = new Map()
-    let rightmap = new Map()
-    // 一次for循环统计这个字符串中的字符出现的频率
-    for (const item of s) {
-        rightmap.set(item, (rightmap.get(item) || 0) + 1)
+  // 优化后的代码
+  let sune = 0;
+  let leftmap = new Map();
+  let rightmap = new Map();
+  // 一次for循环统计这个字符串中的字符出现的频率
+  for (const item of s) {
+    rightmap.set(item, (rightmap.get(item) || 0) + 1);
+  }
+  // 后面就是一个最后的for循环
+  for (const item of s) {
+    leftmap.set(item, (leftmap.get(item) || 0) + 1);
+    if (rightmap.get(item) === 1) {
+      rightmap.delete(item);
+    } else {
+      rightmap.set(item, rightmap.get(item) - 1);
     }
-    // 后面就是一个最后的for循环
-    for (const item of s) {
-        leftmap.set(item, (leftmap.get(item) || 0) + 1)
-        if (rightmap.get(item) === 1) {
-            rightmap.delete(item)
-        } else {
-            rightmap.set(item, rightmap.get(item) - 1)
-        }
-        if (leftmap.size === rightmap.size) {
-            sune++
-        }
+    if (leftmap.size === rightmap.size) {
+      sune++;
     }
-    return sune
+  }
+  return sune;
 };

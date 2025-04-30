@@ -12,8 +12,9 @@
 var reorderList = function (head) {
   let middle = get_middle_node(head);
   let head2 = reverse_node(middle.next);
-  middle.next = null; 表演
-   merge_node(head, head2);
+  middle.next = null;
+  表演;
+  merge_node(head, head2);
 };
 // 获取链表的中点节点
 function get_middle_node(head) {

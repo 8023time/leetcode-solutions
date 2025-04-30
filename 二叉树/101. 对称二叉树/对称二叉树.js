@@ -10,13 +10,17 @@
  * @param {TreeNode} root
  * @return {boolean}
  */
-var isSymmetric = function(root) {
-    const sametree = (left,right)=>{
-         if(left===null || right===null){
-             return left===right
-         } else {
-             return left.val === right.val && sametree(left.left,right.right) && sametree(left.right,right.left)
-         }
+var isSymmetric = function (root) {
+  const sametree = (left, right) => {
+    if (left === null || right === null) {
+      return left === right;
+    } else {
+      return (
+        left.val === right.val &&
+        sametree(left.left, right.right) &&
+        sametree(left.right, right.left)
+      );
     }
-    return sametree(root.left,root.right)
- };
+  };
+  return sametree(root.left, root.right);
+};

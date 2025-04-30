@@ -31,7 +31,7 @@ var reverseBetween = function (head, left, right) {
     current = next;
   }
   pre.next = fristnode;
-  seconednode.next = current
+  seconednode.next = current;
 
   return dummy.next;
 };
@@ -68,7 +68,7 @@ var reverseBetween = function (head, left, right) {
     current = next;
   }
   pre.next = fristnode;
-  seconednode.next = current
+  seconednode.next = current;
 
   return dummy.next;
 };
