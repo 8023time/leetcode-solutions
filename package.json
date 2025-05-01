@@ -5,12 +5,12 @@
   "main": "generateReadme.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "add": "git add .",
-    "commit": "node commit-with-date.js",
-    "push": "git push -u origin main",
-    "updata": "git add . && node commit-with-date.js && git push -u origin main",
-    "generate": "node generateReadme.js",
-    "format": "prettier --write ."
+    "A": "git add .",
+    "C": "node commit-with-date.js",
+    "P": "git push -u origin main",
+    "U": "git add . && node commit-with-date.js && git push -u origin main",
+    "G": "node generateReadme.js",
+    "F": "prettier --write ."
   },
   "repository": {
     "type": "git",
