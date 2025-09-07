@@ -10,14 +10,16 @@ function generateTree(dirPath, indent = "", isLast = false) {
 
     for (let i = 0; i < items.length; i++) {
         const item = items[i];
-        // 添加这行来忽略.git目录
+        // 添加这行来忽略.git,node_modules目录
         if (item === ".git") continue;
+        if (item === "node_modules") continue;
+        // 其余忽略文件（目前只对文件夹有效，下面可删，主要对未来情况做准备）
         if (item === "README.md") continue;
         if (item === ".gitignore") continue;
+        if (item === ".prettierrc") continue;
         if (item === "package.json") continue;
-        if (item === "node_modules") continue;
         if (item === "tsconfig.json") continue;
-        if (item === ".prettierrc.json") continue;
+        if (item === ".prettierignore") continue;
         if (item === "generateReadme.js") continue;
         if (item === "package-lock.json") continue;
         if (item === "commit-with-date.js") continue;
@@ -29,20 +31,14 @@ function generateTree(dirPath, indent = "", isLast = false) {
             tree += `${indent}${isLast ? "    " : "│   "}`;
             tree += isLastItem ? "└── " : "├── ";
             tree += `${item}/\n`;
-            tree += generateTree(
-                fullPath,
-                indent + (isLast ? "    " : "│   "),
-                isLastItem
-            );
+            tree += generateTree(fullPath, indent + (isLast ? "    " : "│   "), isLastItem);
         }
     }
 
     return tree;
 }
 
-const mdContent = `# LEETCODE-SOLUTIONS\n\n\`\`\`\n${rootDir}/\n${generateTree(
-    rootDir
-)}\`\`\``;
+const mdContent = `# LEETCODE-SOLUTIONS\n\n\`\`\`\n${rootDir}/\n${generateTree(rootDir)}\`\`\``;
 
 fs.writeFileSync(outputPath, mdContent, "utf-8");
 console.log("✅ README.md 生成成功！");

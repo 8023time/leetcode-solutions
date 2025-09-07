@@ -1,33 +1,32 @@
 {
-  "name": "leetcode-solutions",
-  "version": "1.0.0",
-  "description": "leetcode solutions in javascript and C++ and go",
-  "main": "generateReadme.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "A": "git add .",
-    "C": "node commit-with-date.js",
-    "P": "git push -u origin main",
-    "U": "git add . && node commit-with-date.js && git push -u origin main",
-    "G": "node generateReadme.js",
-    "F": "prettier --write ."
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/8023time/leetcode-solutions.git"
-  },
-  "keywords": [],
-  "author": "8023time",
-  "license": "ISC",
-  "type": "module",
-  "bugs": {
-    "url": "https://github.com/8023time/leetcode-solutions/issues"
-  },
-  "homepage": "https://github.com/8023time/leetcode-solutions#readme",
-  "devDependencies": {
-    "prettier": "3.5.3"
-  },
-  "dependencies": {
-    "typescript": "^5.9.2"
-  }
+    "name": "leetcode-solutions",
+    "version": "1.0.0",
+    "description": "leetcode solutions in javascript and C++ and go",
+    "main": "generateReadme.js",
+    "scripts": {
+        "A": "git add .",
+        "C": "node commit-with-date.js",
+        "P": "git push -u origin main",
+        "U": "git add . && node commit-with-date.js && git push -u origin main",
+        "G": "node generateReadme.js",
+        "F": "prettier --write ."
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/8023time/leetcode-solutions.git"
+    },
+    "keywords": [],
+    "author": "8023time",
+    "license": "ISC",
+    "type": "module",
+    "bugs": {
+        "url": "https://github.com/8023time/leetcode-solutions/issues"
+    },
+    "homepage": "https://github.com/8023time/leetcode-solutions#readme",
+    "devDependencies": {
+        "prettier": "3.5.3"
+    },
+    "dependencies": {
+        "typescript": "^5.9.2"
+    }
 }
