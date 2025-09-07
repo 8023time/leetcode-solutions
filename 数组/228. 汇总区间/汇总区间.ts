@@ -3,11 +3,11 @@ function summaryRanges(nums: number[]): string[] {
     let ans: string[] = [];
     let index: number = 0;
     while (index < length) {
-        let start: number = nums[index];
+        let start: number = nums[index]!;
         let end: number = start;
         while (index + 1 < length && nums[index + 1] === end + 1) {
             index++;
-            end = nums[index];
+            end = nums[index]!;
         }
 
         if (start === end) {

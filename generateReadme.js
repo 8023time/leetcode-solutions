@@ -12,9 +12,11 @@ function generateTree(dirPath, indent = "", isLast = false) {
         const item = items[i];
         // 添加这行来忽略.git目录
         if (item === ".git") continue;
+        if (item === "README.md") continue;
         if (item === ".gitignore") continue;
         if (item === "package.json") continue;
         if (item === "node_modules") continue;
+        if (item === "tsconfig.json") continue;
         if (item === ".prettierrc.json") continue;
         if (item === "generateReadme.js") continue;
         if (item === "package-lock.json") continue;

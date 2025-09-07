@@ -26,5 +26,8 @@
   "homepage": "https://github.com/8023time/leetcode-solutions#readme",
   "devDependencies": {
     "prettier": "3.5.3"
+  },
+  "dependencies": {
+    "typescript": "^5.9.2"
   }
 }
